@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Getting Started with ASP.NET 4.5 Web Forms</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET Web Forms, ASP.NET 4.5
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            ASP.NET 4.5 Web Forms
+                        </div>
+                    </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">4/12/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Getting-Started-with-221c01f5">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This download has been created for the <a title="Getting Started with ASP.NET 4.5 Web Forms" href="http://www.asp.net/web-forms/tutorials/aspnet-45/getting-started-with-aspnet-45-web-forms/introduction-and-overview">
+Getting Started with ASP.NET 4.5 Web Forms</a> (Wingtip Toys) tutorial series available on the ASP.NET web site. This series of tutorials guides you through the steps required to create an ASP.NET Web Forms application using Visual Studio 11 Express Beta for
+ Web and ASP.NET 4.5 Beta.</p>
+<p>The application you'll create is named the Wingtip Toys. It's a simplified example of a store front web site that sells items online. This tutorial series highlights several of the new features available in ASP.NET 4.5 Beta.</p>
+<p>Visit the tutorial series:<br>
+<a title="Getting Started with ASP.NET 4.5 Web Forms" href="http://www.asp.net/web-forms/tutorials/aspnet-45/getting-started-with-aspnet-45-web-forms/introduction-and-overview">Getting Started with ASP.NET 4.5 Web Forms</a></p>
+<p>This tutorial series is the first installment of two. Comments are welcome, and we'll make every effort to update this tutorial series based on your suggestions.</p>
+<h1><span>Audience</span></h1>
+<p>The intended audience of this tutorial series is experienced developers who are new to ASP.NET Web Forms. A developer interested in this tutorial series should have the following skills:</p>
+<ul>
+<li>Familiar with an object oriented programming language </li><li>Familiar with Web development concepts (HTML, CSS, JavaScript) </li><li>Familiar with relational database concepts </li><li>Familiar with n-tier architecture concepts </li></ul>
+<p><span style="font-size:20px; font-weight:bold">Application Features</span></p>
+<p>The ASP.NET Web Form features presented in this series include:</p>
+<ul>
+<li>The Web Application Project (not Web Site Project) </li><li>Web Forms </li><li>Master Pages, Configuration </li><li>Entity Framework Code First, LocalDB </li><li>Request Validation </li><li>Strongly Typed Data Controls, Model Binding, Data Annotations, and Value Providers
+</li></ul>
+<h1>Application Scenarios and Tasks</h1>
+<p>Tasks demonstrated in this first series include:</p>
+<ul>
+<li>Creating, reviewing and running the new project </li><li>Creating the database structure </li><li>Initializing and seeding the database </li><li>Customizing the UI using styles, graphics and a master page </li><li>Adding pages and navigation </li><li>Displaying menu details and product data </li></ul>
+<h1>Overview</h1>
+<p>If you are new to ASP.NET Web Forms but have familiarity with programming concepts, you have the right tutorial. If you are already familiar with ASP.NET Web Forms, you can benefit from this tutorial series by the new features available in ASP.NET 4.5 Beta.
+ If you are unfamiliar with programming concepts and ASP.NET Web Forms, see<a href="http://www.asp.net/web-forms">Getting Started</a> on the ASP.NET Web site.</p>
+<p>The following screen shots provide a quick view of the ASP.NET Web forms application that you will create in this tutorial series. When you run the application from Visual Studio 11 Express Beta for Web, you will see the following web Home page.</p>
+<p><img src="description/Intro-01.png" alt="" width="619" height="496"></p>
+<p>&nbsp;</p>
+<h1>Download the Sample Application</h1>
+<p>After installing the prerequisites, you are ready to begin creating the new Web project that is presented in this tutorial series. If you would like to run the sample application that this tutorial series creates, you can download it from the MSDN Samples
+ site. This download contains the following:</p>
+<ul>
+<li>The sample application in the <em>WingtipToys</em> folder. </li><li>The resources used to create the sample application in the <em>WingtipToys-Assets</em> folder in the
+<em>WingtipToys</em> folder. </li><li>A PDF file containing this tutorial series in the <em>WingtipToys</em> folder.
+</li></ul>
+<p>The download is a <em>.zip</em> file. To see the completed project that this tutorial series creates, find and select the
+<em>C#</em> folder in the <em>.zip</em> file. Save the <em>C#</em> folder <strong>
+</strong>to the folder you use to work with Visual Studio 11 Beta projects. By default this is the following folder:</p>
+<p>C:\Users\<em>&lt;username&gt;</em>\Documents\Visual Studio 11\Projects</p>
+<p>Rename the <em>C#</em> folder to <em>WingtipToys</em>.</p>
+<p><strong>Note</strong></p>
+<p>If you already have a folder named <em>WingtipToys</em> in your <strong>Projects</strong> folder, temporarily rename that existing folder before&nbsp;renaming the
+<em>C#</em>&nbsp;folder.</p>
+<p>To run the completed project, open the <em>WingtipToys</em> folder and double-click the
+<em>WingtipToys.sln</em> file. Visual Studio 11 Beta will open the project. Next, right-click the
+<em>Default.aspx</em> file in the <strong>Solution Explorer</strong> window and click
+<strong>View In Browser</strong> from the right-click menu.</p>
+<p>&nbsp;</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

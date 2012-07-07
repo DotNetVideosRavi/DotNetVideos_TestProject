@@ -1,0 +1,19 @@
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\WingtipToys.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\WingtipToys.pdb
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\EntityFramework.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\Microsoft.ScriptManager.jQuery.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\Microsoft.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\System.Web.Providers.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\bin\EntityFramework.xml
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\obj\Debug\WingtipToys.csprojResolveAssemblyReference.cache
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\obj\Debug\WingtipToys.dll
+C:\Users\erikre\Documents\Visual Studio 11\Projects\WingtipToys\WingtipToys\obj\Debug\WingtipToys.pdb
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\WingtipToys.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\WingtipToys.pdb
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\EntityFramework.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\Microsoft.ScriptManager.jQuery.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\Microsoft.ScriptManager.jQuery.UI.Combined.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\System.Web.Providers.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\bin\EntityFramework.xml
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\obj\Debug\WingtipToys.dll
+C:\work\Getting Started with ASP.NET 4.5 Web Forms\C#\WingtipToys\obj\Debug\WingtipToys.pdb
